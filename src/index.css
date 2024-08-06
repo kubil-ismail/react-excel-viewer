@@ -10,7 +10,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-} 
+}
 
 .App {
   position: relative;
@@ -20,4 +20,32 @@ code {
 .x-spreadsheet-menu .x-spreadsheet-icon {
   display: none !important;
   visibility: hidden !important;
+}
+
+.header {
+  background-color: #eaecf0;
+  padding: 20px;
+  font-weight: bold;
+  position: fixed;
+  width: 96.5vw;
+  z-index: 99;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spacer {
+  padding: 30px;
+}
+
+.text-neutral-950 {
+  color: #111111;
+}
+
+.btn-neutral-500 {
+  color: #98adb3;
+}
+
+.neutral-400 {
+  background-color: #dee2e8;
 }
