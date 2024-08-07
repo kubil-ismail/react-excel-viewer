@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { useSearchParams } from "react-router-dom";
 import {
-  ArrowDownTrayIcon,
   MinusCircleIcon,
   PlusCircleIcon,
   ArrowDownOnSquareIcon,
@@ -16,7 +15,7 @@ export default function MyApp() {
 
   const [searchParams] = useSearchParams();
   const url = searchParams.get("url");
-  const filename = url.split("/")[url.split("/").length - 1];
+  const filename = url.split("/")[url.split("/").length - 1]?.split("?")[0];
 
   const [width, setWidth] = useState(0);
   const [scale, setScale] = useState(1);
@@ -58,12 +57,29 @@ export default function MyApp() {
   return (
     <div>
       <div className="header">
-        <span className="text-neutral-950">{filename}</span>
+        <div
+          style={{
+            width: "300px",
+            overflow: 'hidden',
+            textOverflow: 'ellipsis'
+          }}
+        >
+          <span
+            className="text-neutral-950"
+            style={{
+              textOverflow: "ellipsis",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {filename}
+          </span>
+        </div>
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            marginLeft: "-60px",
+            marginLeft: "-15%",
           }}
         >
           <MinusCircleIcon

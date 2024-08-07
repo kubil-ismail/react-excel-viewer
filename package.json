@@ -4,11 +4,6 @@
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.1.5",
-    "@mescius/spread-sheets": "^17.1.2",
-    "@mescius/spread-sheets-charts": "^17.1.2",
-    "@mescius/spread-sheets-io": "^17.1.2",
-    "@mescius/spread-sheets-react": "^17.1.2",
-    "@mescius/spread-sheets-shapes": "^17.1.2",
     "@react-pdf/renderer": "^3.4.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
